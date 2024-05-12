@@ -1,6 +1,7 @@
 package codes.mettlach;
 
 import org.junit.Test;
+
 import com.google.testing.compile.Compilation;
 import com.google.testing.compile.JavaFileObjects;
 import com.google.testing.compile.Compilation.Status;
@@ -16,6 +17,7 @@ public class JavaDraperBuildProcessorTest {
         File presenterSourceFile =
                 new File("src/test/java/codes/mettlach/test_src/FooPresenter.java");
         File targetSourceFile = new File("src/test/java/codes/mettlach/test_src/Foo.java");
+        System.out.println(presenterSourceFile.toURI().toURL());
         Compilation compilation = javac().withProcessors(processor).compile(
                 JavaFileObjects.forResource(presenterSourceFile.toURI().toURL()),
                 JavaFileObjects.forResource(targetSourceFile.toURI().toURL()));
