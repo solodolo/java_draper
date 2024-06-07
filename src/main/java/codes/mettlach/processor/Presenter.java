@@ -1,4 +1,4 @@
-package codes.mettlach;
+package codes.mettlach.processor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
